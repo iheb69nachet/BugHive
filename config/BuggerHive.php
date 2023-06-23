@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'login_key' => env('LB_KEY', ''),
+    'login_key' => env('BH_KEY', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'project_key' => env('LB_PROJECT_KEY', ''),
+    'project_key' => env('BH_PROJECT_KEY', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -129,7 +129,7 @@ return [
     |
     */
 
-    'server' => env('LB_SERVER', 'https://www.larabug.com/api/log'),
+    'server' => env('LB_SERVER', 'http://localhost:8000/api/exception'),
 
     /*
     |--------------------------------------------------------------------------
@@ -140,6 +140,6 @@ return [
     | Never turn SSL verification off on production instances
     |
     */
-    'verify_ssl' => env('LB_VERIFY_SSL', true),
+    'verify_ssl' => env('BH_VERIFY_SSL', true),
 
 ];
