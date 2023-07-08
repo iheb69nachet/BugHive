@@ -27,14 +27,14 @@ class TestCommand extends Command
                 $this->info('✓ [bughive] Found project key');
             } else {
                 $this->error('✗ [bughive] Could not find your project key, set this in your .env');
-                $this->info('More information on setting your project key: https://www.bughive.com/docs/how-to-use/installation');
+                $this->info('More information on setting your project key can be found in installation/usage in your project');
             }
 
             if (in_array(config('app.env'), config('bughive.environments'))) {
                 $this->info('✓ [bughive] Correct environment found (' . config('app.env') . ')');
             } else {
                 $this->error('✗ [bughive] Environment (' . config('app.env') . ') not allowed to send errors to bughive, set this in your config');
-                $this->info('More information about environment configuration: https://www.bughive.com/docs/how-to-use/installation');
+                $this->info('More information about environment configuration in bughive.php');
             }
 
             $response = $bughive->handle(
