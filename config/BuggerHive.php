@@ -129,7 +129,7 @@ return [
     |
     */
 
-    'server' => env('LB_SERVER', 'http://localhost:8000/api/exception'),
+    'server' => env('LB_SERVER', 'https://app-bughive.evosec.fr/api/exception'),
 
     /*
     |--------------------------------------------------------------------------
