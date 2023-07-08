@@ -10,9 +10,9 @@ use Monolog\Handler\AbstractProcessingHandler;
 class BugHiveHandler extends AbstractProcessingHandler
 {
   
-    public function __construct(BugHive $laraBug, $level = Logger::ERROR, bool $bubble = true)
+    public function __construct(BugHive $bughive, $level = Logger::ERROR, bool $bubble = true)
     {
-        $this->laraBug = $laraBug;
+        $this->bughive = $bughive;
 
         parent::__construct($level, $bubble);
     }
@@ -23,7 +23,7 @@ class BugHiveHandler extends AbstractProcessingHandler
     protected function write($record): void
     {
         if (isset($record['context']['exception']) && $record['context']['exception'] instanceof Throwable) {
-            $this->laraBug->handle(
+            $this->bughive->handle(
                 $record['context']['exception']
             );
 

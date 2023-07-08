@@ -40,7 +40,7 @@ class Client
                     'Authorization' => 'Bearer '.$this->login,
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                    'User-Agent' => 'LaraBug-Package'
+                    'User-Agent' => 'BugHive-Package'
                 ],
                 'json' => array_merge([
                     'project' => $this->project,
